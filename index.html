@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silicon</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
+    <title>Silicon</title>
+    
   </head>
-
   <body>
     <div class="container">
       <header class="header">
@@ -14,9 +15,22 @@
           ><img src="images/si14.svg" alt="Silicon Logotype"
         /></a>
 
-        <nav>
+        <nav class="left">
             <a href="#">Features</a>
-        </nav>
+        </nav>  
+        <div class="toggle">
+          <span class="label">Dark Mode</span>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <a id="signin" href="#" class="primary">
+        <i class="fa-thin fa-user-large"></i>
+        <span>Sign In / Up</span>
+
+      </a>
 
         </nav>
       </header>
