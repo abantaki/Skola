@@ -5,12 +5,12 @@
 }
 
 body {
+  background-color: #f3f6ff;
   font-family: "manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  background-color: F3F6FF;
   margin: 0;
   max-width: 1920px;
 }
@@ -21,8 +21,8 @@ body {
   padding: 20px;
 }
 
-
 header {
+  background-color: #f3f6ff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,4 +128,124 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.page1right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.phone-one {
+  position: absolute;
+  top: 60px;
+  left: 269px;
+  z-index: 2;
+  max-width: 402.29px;
+  max-height: 813.42px;
+}
+
+.phone-two {
+  position: relative;
+  left: -40px;
+  top: 256px;
+  z-index: 1;
+  max-width: 352.43px;
+  max-height: 761.73px;
+}
+
+.page1 {
+  display: flex;
+  background-color: #f3f6ff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.page1 .page1left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 491px;
+}
+.container .page1right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.page1left h2 {
+  color: #0b0f19;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 115%;
+  text-shadow: 1px 2px 3px;
+  width: 495px;
+}
+.page1left p {
+  font-size: 18px;
+  line-height: 160%;
+  width: 487px;
+}
+
+store-button {
+  width: 100px;
+}
+
+/* Button container styling */
+.discover-button {
+  position: relative;
+  left: -40px;
+  top: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between the circle and text */
+  cursor: pointer;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #555; /* Text color */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Circle styling */
+.circle {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 3px;
+  top: 1px;
+  background-color: white;
+  border-radius: 50%; /* Makes the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for effect */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Down arrow styling */
+.arrow-down {
+  border: solid #555; /* Arrow color */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg); /* Rotates to make an arrow */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effects */
+.discover-button:hover .circle {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.discover-button:hover .arrow-down {
+  transform: rotate(225deg); /* Rotates the arrow upwards */
+}
+
+.discover-button:hover span {
+  color: #000; /* Darkens text color on hover */
 }
