@@ -131,29 +131,25 @@ input:checked + .slider:before {
 }
 
 .page1right {
-  flex: 1;
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
-.phone-one {
-  position: absolute;
-  top: 60px;
-  left: 269px;
-  z-index: 2;
-  max-width: 402.29px;
-  max-height: 813.42px;
-}
-
+.phone-one,
 .phone-two {
-  position: relative;
-  left: -40px;
-  top: 256px;
+  position: relative; /* No absolute positioning */
+  max-width: 300px; /* Adjust width to fit the layout */
+  margin-left: -153px; /* Overlap images slightly */
   z-index: 1;
-  max-width: 352.43px;
-  max-height: 761.73px;
+}
+.phone-one {
+  z-index: 2; /* To ensure it stays on top */
+  top: 48px;
+}
+.phone-two {
+  top: 95px;
 }
 
 .page1 {
@@ -162,6 +158,8 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  position: relative;
+  min-height: 100vh;
 }
 .page1 .page1left {
   display: flex;
@@ -189,17 +187,20 @@ input:checked + .slider:before {
   font-size: 18px;
   line-height: 160%;
   width: 487px;
+  font-style: regular;
 }
 
-store-button {
-  width: 100px;
+.store-buttons {
+  width: 498px;
+  display: flex;
+  gap: 20px;
 }
 
 /* Button container styling */
 .discover-button {
   position: relative;
-  left: -40px;
-  top: 256px;
+  left: -184px;
+  top: 97px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -248,4 +249,102 @@ store-button {
 
 .discover-button:hover span {
   color: #000; /* Darkens text color on hover */
+}
+
+.page2 {
+  background-color: white; 
+  padding: 60px 0; 
+  max-width: 100%;
+}
+
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px; 
+  margin-bottom: 50px; 
+}
+
+.logos img {
+  max-width: 100px; 
+  height: auto;
+}
+
+
+.features-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+
+.phone-feature {
+  flex: 1; 
+}
+
+.phone-feature img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.app-features {
+  flex: 2; 
+  text-align: left;
+}
+
+.app-features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.app-features p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; 
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Space between icon and text */
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Light shadow for card effect */
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+}
+
+.feature-item img {
+  width: 50px; /* Icon size */
+  height: 50px;
+}
+
+.feature-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0b0f19;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
